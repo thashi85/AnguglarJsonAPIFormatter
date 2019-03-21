@@ -113,39 +113,39 @@ export class AppComponent {
 ```
 ```javascript
 data:
-type: "CorporateCustomer"
-id: "1001"
-attributes:
-name: "Test Customer"
-reference: "CU1001"
-active: true
-addrress:
-addressLine1: "Address1"
-addressLine2: "Address2"
+    type: "CorporateCustomer"
+    id: "1001"
+    attributes:
+        name: "Test Customer"
+        reference: "CU1001"
+        active: true
+        addrress:
+        addressLine1: "Address1"
+        addressLine2: "Address2"
 relationships:
-contacts:
-data:
-0:
-id: "2001"
-type: "contact"
-1:
-id: "2002"
-type: "contact"
+    contacts:
+        data:
+            0:
+                id: "2001"
+                type: "contact"
+            1:
+                id: "2002"
+                type: "contact"
 included:
-0:
-type: "contact"
-id: "2001"
-attributes:
-name: "test contact"
-email: "testc@t.com"
-phone: "071858965"
-1:
-type: "contact"
-id: "2002"
-attributes:
-name: "test2 contact"
-email: "test2c@t.com"
-phone: "0114785258"
+    0:
+        type: "contact"
+        id: "2001"
+        attributes:
+            name: "test contact"
+            email: "testc@t.com"
+            phone: "071858965"
+    1:
+        type: "contact"
+        id: "2002"
+        attributes:
+            name: "test2 contact"
+            email: "test2c@t.com"
+            phone: "0114785258"
 ```
 Serialized Output:
 
@@ -162,16 +162,16 @@ addressLine2: "Address2"
 id: "1001"
 type: "CorporateCustomer"
 contacts:
-0:
-name: "test contact"
-email: "testc@t.com"
-phone: "071858965"
-id: "2001"
-type: "contact"
-1:
-name: "test2 contact"
-email: "test2c@t.com"
-phone: "0114785258"
-id: "2002"
-type: "contact"
+    0:
+        name: "test contact"
+        email: "testc@t.com"
+        phone: "071858965"
+        id: "2001"
+        type: "contact"
+    1:
+        name: "test2 contact"
+        email: "test2c@t.com"
+        phone: "0114785258"
+        id: "2002"
+        type: "contact"
 ```
