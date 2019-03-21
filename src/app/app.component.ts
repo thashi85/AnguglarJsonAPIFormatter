@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Deserializer, Serializer } from 'json-api-format';
+import { Deserializer, Serializer } from 'ts-json-api-formatter';
 import {customer, address, contact} from 'src/models/customer'
 
 

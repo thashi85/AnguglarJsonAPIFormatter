@@ -1,13 +1,16 @@
 {
   "name": "ts-json-api-formatter",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "This will serialize typescript class object to Json API Format and Json API format string to the typescript object",
-  "author": {"name": "Thakshila"},
+  "author": {
+            "name": "Thakshila",
+            "email": "thashilk@gmail.com"
+          },
   "peerDependencies": {
     "@angular/common": "^7.0.0",
     "@angular/core": "^7.0.0",
     "inflected": "^1.1.6",
     "lodash": "^4.16.4"
-  }
-  
+  }, 
+  "keywords": ["JsonAPIFormat"]
 }

@@ -1,4 +1,4 @@
-import { BaseResource } from 'json-api-format';
+import { BaseResource } from 'ts-json-api-formatter';
 export class customer extends BaseResource{
     public reference: string;  
     public name: string;
