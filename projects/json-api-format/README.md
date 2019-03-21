@@ -1,4 +1,4 @@
-# Json API Format Converter for Typescript
+# Json API Format Converter for Angular
 
 Json API Formatter for Angular(Typescript)
 ## Getting Started
