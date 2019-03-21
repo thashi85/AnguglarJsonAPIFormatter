@@ -133,6 +133,41 @@
           }
         }
       }
+    },
+    "JsonAPIFormat": {
+      "root": "projects/json-apiformat",
+      "sourceRoot": "projects/json-apiformat/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/json-apiformat/tsconfig.lib.json",
+            "project": "projects/json-apiformat/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/json-apiformat/src/test.ts",
+            "tsConfig": "projects/json-apiformat/tsconfig.spec.json",
+            "karmaConfig": "projects/json-apiformat/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/json-apiformat/tsconfig.lib.json",
+              "projects/json-apiformat/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "JsonAPIFormatLibrary"

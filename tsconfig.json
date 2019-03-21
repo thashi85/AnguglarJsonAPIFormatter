@@ -16,6 +16,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "json-apiformat": [
+        "dist/json-apiformat"
+      ],
+      "json-apiformat/*": [
+        "dist/json-apiformat/*"
+      ]
+    }
   }
 }
