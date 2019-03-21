@@ -153,6 +153,7 @@ Serialized Output:
 Deserialized Output(same serialized output is deserialized):
 
 ```json
+
 name: "Test Customer"
 reference: "CU1001"
 active: true
