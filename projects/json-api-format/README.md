@@ -157,8 +157,8 @@ name: "Test Customer"
 reference: "CU1001"
 active: true
 addrress:
-addressLine1: "Address1"
-addressLine2: "Address2"
+    addressLine1: "Address1"
+    addressLine2: "Address2"
 id: "1001"
 type: "CorporateCustomer"
 contacts:
