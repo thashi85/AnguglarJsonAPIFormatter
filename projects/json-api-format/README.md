@@ -1,4 +1,4 @@
-# Project Title
+# Json API Format Converter for Typescript
 
 Json API Formatter for Angular(Typescript)
 ## Getting Started
@@ -7,7 +7,7 @@ Install JsonAPIFormmatter through npm:
 npm install --save json-api-Formatter
 ```
 Json API resource is identified by the id/tid attribute
-when creating a type script class inherit them from base resource
+when creating a typescript class, if that is a resource inherit that from base resource
 
 Ex:
 ```typescript
@@ -46,7 +46,7 @@ For serialize/deserialize import Serializer and Deserializer
 ```typescript
 import { Serializer } from 'json-api-format';
 import { Deserializer } from 'json-api-format';
-```typescript
+```
 
 Create the instance of serializer and call "serialize" method by passing type script object
 ```typescript
@@ -111,7 +111,7 @@ export class AppComponent {
     }
 }
 ```
-```Json
+```javascript
 data:
 type: "CorporateCustomer"
 id: "1001"
