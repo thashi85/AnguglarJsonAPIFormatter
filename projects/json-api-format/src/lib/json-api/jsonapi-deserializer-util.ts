@@ -23,13 +23,13 @@ export class JsonAPIDeserializerUtil extends JsonAPIUtil {
         return dest;
     }
     private extractRelationships(from: any): any {
-        debugger;
+        
         if (!from.relationships) { return; }
 
         let dest: any = {};
 
         Object.keys(from.relationships)
-            .map((key: string) => {
+            .map((key: string) => {                
                 let relationship = from.relationships[key];
 
                 if (relationship.data === null) {
@@ -59,7 +59,7 @@ export class JsonAPIDeserializerUtil extends JsonAPIUtil {
         return valueForRelationship;
     }
     private findIncluded(relationshipData: any, relationshipName: any, from: any) {
-        if (!this.jsonapi.included || !relationshipData) {
+        if (!relationshipData) {
             return null;
         }
 

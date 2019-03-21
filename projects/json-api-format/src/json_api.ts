@@ -7,3 +7,4 @@
 //export * from './lib/json-api-format.module';
 export * from './lib/json-api/jsonapi-serializer';
 export * from './lib/json-api/jsonapi-deserializer';
+export * from './lib/models/base-resource';

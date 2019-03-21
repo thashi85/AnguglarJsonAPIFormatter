@@ -12,13 +12,13 @@ export class Deserializer {
         }
     }
 
-    collection(jsonapi: any) {
+    private collection(jsonapi: any) {
         return _.map(jsonapi.data, (d) => {
             return new JsonAPIDeserializerUtil(jsonapi).perform(d);
         });
     }
 
-    resource(jsonapi: any) {
+    private resource(jsonapi: any) {
         return new JsonAPIDeserializerUtil(jsonapi).perform(jsonapi.data);
     }
 }

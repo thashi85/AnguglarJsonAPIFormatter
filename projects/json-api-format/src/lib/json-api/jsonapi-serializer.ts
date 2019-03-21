@@ -14,7 +14,7 @@ export class Serializer {
         }
     }
 
-    collection(data: any) {
+    private collection(data: any) {
         this.payload.data = [];
         var serializerUtils = new JsonAPISerializerUtil(this.collectionName, this.opts);
         //data mapping
@@ -28,7 +28,7 @@ export class Serializer {
         return this.payload;
     }
 
-    resource(data: any) {
+    private resource(data: any) {
         var serializerUtils = new JsonAPISerializerUtil(this.collectionName, this.opts);
         //data mapping
         this.payload.data = serializerUtils.perform(data);

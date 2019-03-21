@@ -1,6 +1,8 @@
 {
   "name": "json-api-format",
   "version": "0.0.1",
+  "description": "This will serialize typescript class object to Json API Format and Json API format string to the typescript object",
+  "author": {"name": "Thakshila"},
   "peerDependencies": {
     "@angular/common": "^7.0.0",
     "@angular/core": "^7.0.0",

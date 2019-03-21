@@ -31,6 +31,6 @@ export class JsonAPIUtil {
     }
 
     protected isComplexType(obj: any) {
-        return _.isArray(obj) || _.isPlainObject(obj);
+        return _.isArray(obj) || _.isObject(obj);
     }
 }
