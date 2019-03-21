@@ -120,8 +120,8 @@ data:
         reference: "CU1001"
         active: true
         addrress:
-        addressLine1: "Address1"
-        addressLine2: "Address2"
+            addressLine1: "Address1"
+            addressLine2: "Address2"
 relationships:
     contacts:
         data:
