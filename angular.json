@@ -134,33 +134,33 @@
         }
       }
     },
-    "JsonAPIFormat": {
-      "root": "projects/json-apiformat",
-      "sourceRoot": "projects/json-apiformat/src",
+    "json-api-format": {
+      "root": "projects/json-api-format",
+      "sourceRoot": "projects/json-api-format/src",
       "projectType": "library",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
-            "tsConfig": "projects/json-apiformat/tsconfig.lib.json",
-            "project": "projects/json-apiformat/ng-package.json"
+            "tsConfig": "projects/json-api-format/tsconfig.lib.json",
+            "project": "projects/json-api-format/ng-package.json"
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/json-apiformat/src/test.ts",
-            "tsConfig": "projects/json-apiformat/tsconfig.spec.json",
-            "karmaConfig": "projects/json-apiformat/karma.conf.js"
+            "main": "projects/json-api-format/src/test.ts",
+            "tsConfig": "projects/json-api-format/tsconfig.spec.json",
+            "karmaConfig": "projects/json-api-format/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/json-apiformat/tsconfig.lib.json",
-              "projects/json-apiformat/tsconfig.spec.json"
+              "projects/json-api-format/tsconfig.lib.json",
+              "projects/json-api-format/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"

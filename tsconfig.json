@@ -23,6 +23,12 @@
       ],
       "json-apiformat/*": [
         "dist/json-apiformat/*"
+      ],
+      "json-api-format": [
+        "dist/json-api-format"
+      ],
+      "json-api-format/*": [
+        "dist/json-api-format/*"
       ]
     }
   }
