@@ -1,5 +1,5 @@
 {
-  "name": "json-api-format",
+  "name": "ts-json-api-formatter",
   "version": "0.0.1",
   "description": "This will serialize typescript class object to Json API Format and Json API format string to the typescript object",
   "author": {"name": "Thakshila"},

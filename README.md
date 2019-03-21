@@ -4,14 +4,14 @@ Json API Formatter for Angular(Typescript)
 ## Getting Started
 Install JsonAPIFormmatter through npm:
 ```angular2html
-npm install --save json-api-Formatter
+npm install --save ts-json-api-formatter
 ```
 Json API resource is identified by the id/tid attribute
 when creating a typescript class, if that is a resource inherit that from base resource
 
 Ex:
 ```typescript
-import { BaseResource } from 'json-api-format';
+import { BaseResource } from 'ts-json-api-formatter';
 export class customer extends BaseResource{
     public reference: string;  
     public name: string;
@@ -44,8 +44,8 @@ var obj=new customer();
 For serialize/deserialize import Serializer and Deserializer
 
 ```typescript
-import { Serializer } from 'json-api-format';
-import { Deserializer } from 'json-api-format';
+import { Serializer } from 'ts-json-api-formatter';
+import { Deserializer } from 'ts-json-api-formatter';
 ```
 
 Create the instance of serializer and call "serialize" method by passing type script object
@@ -63,7 +63,7 @@ Example:
 
 ```typescript
 import { Component } from '@angular/core';
-import { Deserializer, Serializer } from 'json-api-format';
+import { Deserializer, Serializer } from 'ts-json-api-formatter';
 import {customer, address, contact} from 'src/models/customer'
 
 
