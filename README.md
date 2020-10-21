@@ -182,3 +182,6 @@ Deserialized Output(same serialized output is deserialized):
         ]
     }
 ```
+<p align="center">
+  <img src="https://github.com/thashi85/AngularJsonAPIFormatter/blob/master/Json%20API%20format.jpg"  >
+</p>
