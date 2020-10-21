@@ -177,7 +177,8 @@ Deserialized Output(same serialized output is deserialized):
     "id":"1001",
     "type":"CorporateCustomer",
     "contacts":[
-        {"name":"test contact","email":"testc@t.com","phone":"071858965","id":"2001","type":"contact"},{"name":"test2 contact","email":"test2c@t.com","phone":"0114785258","id":"2002","type":"contact"}
+        {"name":"test contact","email":"testc@t.com","phone":"071858965","id":"2001","type":"contact"},
+        {"name":"test2 contact","email":"test2c@t.com","phone":"0114785258","id":"2002","type":"contact"}
         ]
     }
 ```

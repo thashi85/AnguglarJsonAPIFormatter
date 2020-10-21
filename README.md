@@ -12,7 +12,8 @@ when creating a typescript class, if that is a resource inherit that from base r
 Ex:
 ```typescript
 import { BaseResource } from 'ts-json-api-formatter';
-export class customer extends BaseResource{
+export class customer extends BaseResource
+{
     public reference: string;  
     public name: string;
     public active: boolean;  

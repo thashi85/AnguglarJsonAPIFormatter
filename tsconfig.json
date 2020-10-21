@@ -18,12 +18,12 @@
       "dom"
     ],
     "paths": {     
-      /*"json-api-format": [
-        "dist/json-api-format"
+      "ts-json-api-formatter": [
+        "dist/ts-json-api-formatter"
       ],
-      "json-api-format/*": [
-        "dist/json-api-format/*"
-      ]*/
+      "ts-json-api-formatter/*": [
+        "dist/ts-json-api-formatter/*"
+      ]
     }
   }
 }

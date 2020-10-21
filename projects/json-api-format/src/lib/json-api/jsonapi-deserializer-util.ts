@@ -3,17 +3,27 @@ import { JsonAPIUtil } from './jsonapi-util';
 
 export class JsonAPIDeserializerUtil extends JsonAPIUtil {
     private alreadyIncluded: any[] = [];
+    private includeObjects: any[] = [];
     constructor(private jsonapi)
     {
         super();
     }
     perform(data :any): any {
-        return _.extend(this.extractAttributes(data), this.extractRelationships(data));
+        return this.populateObject(data);
     }   
-
+    private populateObject(data:any)
+    {
+        let obj=this.includeObjects.find(o=>o.id==data.id && o.type==data.type);
+        if(obj){
+            return obj;
+        }
+        let ret= _.extend(this.extractAttributes(data), this.extractRelationships(data));
+        this.includeObjects.push(ret);
+        return ret;
+    } 
     private extractAttributes(from: any) {
-        if (!from.attributes) { return; }
-        let dest = this.keyForAttribute(from.attributes || {});
+        if (from==undefined||!from.attributes) { return; }          
+        let dest=this.keyForAttribute(from.attributes || {});
         if ('id' in from) {
             dest.id = from.id;
         }
@@ -24,7 +34,7 @@ export class JsonAPIDeserializerUtil extends JsonAPIUtil {
     }
     private extractRelationships(from: any): any {
         
-        if (!from.relationships) { return; }
+        if (from==undefined|| !from.relationships) { return; }
 
         let dest: any = {};
 
@@ -45,7 +55,7 @@ export class JsonAPIDeserializerUtil extends JsonAPIUtil {
                 } else {
                     let includes = this.extractIncludes(relationship.data, key, from)
                     if (includes) {
-                        return dest[this.keyForAttribute(key)] = includes;
+                        dest[this.keyForAttribute(key)] = includes;
                     }
                 }
             });
@@ -74,24 +84,32 @@ export class JsonAPIDeserializerUtil extends JsonAPIUtil {
                 type: from.type
             },
             from: Object.assign({}, relationshipData),
-            relation: relationshipName
+            relation: relationshipName            
         };
-
+        
         // Check if the include is already processed (prevent circular references).
         if (_.find(this.alreadyIncluded, includedObject)) {
-            return null;
-        } else {
+            var obj=this.includeObjects.find(o=>o.id==relationshipData.id && o.type==relationshipData.type);
+            return obj;
+        } 
+         else 
+        {
             this.alreadyIncluded.push(includedObject);
-        }
-
-        if (included) {
-            return _.extend(this.extractAttributes(included), this.extractRelationships(included));
+        } 
+     
+        let ret: {};
+        if (included) {       
+            ret=this.populateObject(included) //_.extend(this.extractAttributes(included), this.extractRelationships(included));  
+                    
         } else {
-            return {
+            ret= {
                 id: relationshipData.id,
                 type: relationshipData.type
-            };
+            };              
         }
+       // this.includeObjects.push(ret);
+       // this.alreadyIncluded.push(includedObject);     
+        return ret;
     }
      
 
