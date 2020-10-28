@@ -119,7 +119,6 @@ export class JsonAPISerializerUtil extends JsonAPIUtil {
             var incAdded = _.find(this.included, function (inc) {
                 return ((!_.isUndefined(inc.id) && inc.id == id) || (!_.isUndefined(inc.tid) && inc.tid == tid)) && inc.type.toLowerCase() == type.toLowerCase()
             });
-
             if (!incAdded) {
                 var inc = this.serializeResource(resource);
                 if (inc.attributes || inc.relationships)
