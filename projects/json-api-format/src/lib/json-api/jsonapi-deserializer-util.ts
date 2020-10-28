@@ -11,15 +11,28 @@ export class JsonAPIDeserializerUtil extends JsonAPIUtil {
     perform(data :any): any {
         return this.populateObject(data);
     }   
-    private populateObject(data:any)
+    private  populateObject(data:any)
     {
+       
         let obj=this.includeObjects.find(o=>o.id==data.id && o.type==data.type);
         if(obj){
             return obj;
         }
-        let ret= _.extend(this.extractAttributes(data), this.extractRelationships(data));
+          let ret= _.extend(this.extractAttributes(data), this.extractRelationships(data));
         this.includeObjects.push(ret);
         return ret;
+        /* var resp;
+        var prm=new Promise((resolve, reject) => {
+            let ret= _.extend(this.extractAttributes(data), this.extractRelationships(data));
+            resolve(ret);
+         });
+         
+         prm.then((r)=>{resp=r;});
+    
+        let responses = await Promise.all([prm]);
+        
+        this.includeObjects.push(resp);  
+        return resp;*/
     } 
     private extractAttributes(from: any) {
         if (from==undefined||!from.attributes) { return; }          

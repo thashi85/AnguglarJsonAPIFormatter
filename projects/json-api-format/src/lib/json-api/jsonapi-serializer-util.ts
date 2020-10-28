@@ -121,7 +121,9 @@ export class JsonAPISerializerUtil extends JsonAPIUtil {
             });
 
             if (!incAdded) {
-                this.included.push(this.serializeResource(resource));
+                var inc = this.serializeResource(resource);
+                if (inc.attributes || inc.relationships)
+                    this.included.unshift(inc);
             }
         }
 

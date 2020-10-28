@@ -9,7 +9,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
-  "private": true,
+  "private": false,
   "dependencies": {
     "@angular/animations": "~7.0.0",
     "@angular/common": "~7.0.0",
@@ -23,7 +23,7 @@
     "core-js": "^2.5.4",
     "ngx-json-viewer": "^2.4.0",
     "rxjs": "~6.3.3",
-    "ts-json-api-formatter": "0.0.1",
+    "ts-json-api-formatter": "1.0.2",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {
